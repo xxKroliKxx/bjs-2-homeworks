@@ -9,8 +9,8 @@ upgradedAddThree(5, 2, 3);
 upgradedAddThree(6, 2, 3); 
 upgradedAddThree(1, 2, 3); 
 
-const sendSignal = () => console.log('Сигнал послан'); 
-const upgradedSendSignal = debounceDecoratorNew(sendSignal,2000);
+const sendSignal = (...args) => console.log('Сигнал послан ');
+const upgradedSendSignal = debounceDecorator2(sendSignal,2000);
 setTimeout(upgradedSendSignal()); 
 setTimeout(upgradedSendSignal(),300); 
 setTimeout(upgradedSendSignal(),900); 
